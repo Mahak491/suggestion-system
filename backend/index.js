@@ -6,6 +6,10 @@ app.use(cors());
 app.use(express.json());
 let suggestions = [];
 
+app.get('/', (req,res) =>{
+  res.end('api is running!!')
+})
+
 app.get('/suggestions', (req, res) => {
   res.json(suggestions);
 });
